@@ -1,5 +1,5 @@
 import "dotenv/config";
-import express from "express";
+import express, { Request, Response } from "express";
 import mongoose from "mongoose";
 import apiRouter from "./routes/api";
 
@@ -9,6 +9,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", apiRouter);
+
+app.get("/", (req, res) => {
+	res.send("Hello World");
+});
 
 mongoose
 	.connect(process.env.MONGO_URI || "")
