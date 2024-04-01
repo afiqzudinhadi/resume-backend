@@ -7,8 +7,13 @@ import { getExperiences } from "../app/experiences/ExperienceController";
 
 const router = express.Router();
 
-// Health Check
+// Default Route
 router.get("/", (req, res) => {
+	res.send("Hello World");
+});
+
+// Health Check
+router.get("/health", (req, res) => {
 	res.send("OK");
 });
 

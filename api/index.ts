@@ -10,10 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", apiRouter);
 
-app.get("/", (req, res) => {
-	res.send("Hello World");
-});
-
 mongoose
 	.connect(process.env.MONGO_URI || "")
 	.then(() => {
