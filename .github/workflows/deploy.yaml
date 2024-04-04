@@ -21,4 +21,5 @@ jobs:
             eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/github-afiqzudinhadi
             git pull
+            npm run stop
             npm run start
