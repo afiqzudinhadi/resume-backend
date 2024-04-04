@@ -22,5 +22,5 @@ jobs:
             ssh-add ~/.ssh/github-afiqzudinhadi
             git pull
             npm run stop
+            sh
             npm run build
-            npx pm2 start dist/index.js --name resume-backend
