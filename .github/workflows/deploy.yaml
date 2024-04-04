@@ -18,5 +18,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd resume-backend
+            eval "$(ssh-agent -s)"
+            ssh-add ~/.ssh/github-afiqzudinhadi
             git pull
             npm run start
