@@ -14,10 +14,12 @@ const detailSchema = new Schema({
 	first_name: String,
 	last_name: String,
 	address: String,
-	social_contact_id: {
-		type: Schema.Types.ObjectId,
-		ref: "Social_contact",
-	},
+	socials: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: "Social",
+		},
+	],
 	education_id: {
 		type: Schema.Types.ObjectId,
 		ref: "Education",

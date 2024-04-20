@@ -24,8 +24,8 @@ export const getUserDetails = async (req: Request, res: Response) => {
 				path: "detail_id",
 				populate: [
 					{
-						path: "social_contact_id",
-						model: "Social_contact",
+						path: "socials",
+						model: "Social",
 					},
 					{
 						path: "education_id",

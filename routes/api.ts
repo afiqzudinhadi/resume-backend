@@ -1,7 +1,7 @@
 import express from "express";
 import { getUsers, getUserDetails } from "../app/users/UserController";
 import { getDetails } from "../app/details/DetailController";
-import { getSocialContacts } from "../app/socialContacts/SocialContactController";
+import { getSocials } from "../app/socials/SocialController";
 import { getEducations } from "../app/educations/EducationController";
 import { getExperiences } from "../app/experiences/ExperienceController";
 
@@ -28,7 +28,7 @@ router.get("/details", getDetails);
 
 // Social Contact Controller
 // Read
-router.get("/social_contacts", getSocialContacts);
+router.get("/socials", getSocials);
 
 // Education Controller
 // Read

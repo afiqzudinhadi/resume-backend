@@ -22,5 +22,4 @@ jobs:
             ssh-add ~/.ssh/github-afiqzudinhadi
             git pull
             npm run stop
-            sh
-            npm run build
+            sh deploy.sh
